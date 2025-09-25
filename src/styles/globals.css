@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=SUSE+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -5,4 +7,16 @@
   --font-display: "Inter", "sans-serif";
   --color-primary-500: oklch(0.84 0.18 117.33);
   --spacing: 0.25rem;
+}
+
+body {
+  background-color: black;
+}
+
+.font-suse-mono {
+  font-family: 'SUSE Mono', monospace;
+}
+
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
 }
