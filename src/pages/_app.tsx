@@ -2,6 +2,7 @@
 import type { AppProps } from 'next/app'
 import '../styles/globals.css'
 import { Geist, Geist_Mono } from "next/font/google";
+import Layout from '../layout/layout';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,10 +16,10 @@ const geistMono = Geist_Mono({
  
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <div className={`${geistSans.variable} ${geistMono.variable} antialiased flex h-screen`}>
-      <main className="flex-1 p-4">
+    <div className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <Layout>
         <Component {...pageProps} />
-      </main>
+      </Layout>
     </div>
   )
 }
