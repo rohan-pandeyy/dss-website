@@ -2,6 +2,7 @@
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import dynamic from "next/dynamic";
+import { IconBrandInstagram, IconBrandLinkedin, IconBrandWhatsapp } from "@tabler/icons-react";
 
 const World = dynamic(() => import("@/components/ui/globe").then((m) => m.World), {
   ssr: false,
@@ -434,6 +435,21 @@ export default function GlobeDemo() {
         >
           <World data={sampleArcs} globeConfig={globeConfig} />
         </motion.div>
+      </div>
+      <div className="absolute bottom-40 w-full z-50 px-4">
+        <div className="max-w-7xl mx-auto">
+            <div className="flex flex-row space-y-4">
+                <a href="#" target="_blank" rel="noopener noreferrer">
+                    <IconBrandInstagram className="w-12 h-12 text-white transition-all duration-300 hover:drop-shadow-[0_0_20px_rgba(255,255,255,1)]" />
+                </a>
+                <a href="#" target="_blank" rel="noopener noreferrer">
+                    <IconBrandLinkedin className="w-12 h-12 text-white transition-all duration-300 hover:drop-shadow-[0_0_20px_rgba(255,255,255,1)]" />
+                </a>
+                <a href="#" target="_blank" rel="noopener noreferrer">
+                    <IconBrandWhatsapp className="w-12 h-12 text-white transition-all duration-300 hover:drop-shadow-[0_0_20px_rgba(255,255,255,1)]" />
+                </a>
+            </div>
+        </div>
       </div>
     </div>
   );
