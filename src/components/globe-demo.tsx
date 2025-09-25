@@ -1,6 +1,6 @@
 "use client";
-import React from "react";
-import { motion } from "motion/react";
+import React, { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import dynamic from "next/dynamic";
 
 const World = dynamic(() => import("@/components/ui/globe").then((m) => m.World), {
@@ -8,6 +8,17 @@ const World = dynamic(() => import("@/components/ui/globe").then((m) => m.World)
 });
 
 export default function GlobeDemo() {
+  const containerRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end start"],
+  });
+
+  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.5]);
+  const x = useTransform(scrollYProgress, [0, 1], [0, 1000]);
+  const y = useTransform(scrollYProgress, [0, 1], [0, 500]);
+
   const globeConfig = {
     pointSize: 4,
     globeColor: "#062056",
@@ -395,48 +406,34 @@ export default function GlobeDemo() {
   ];
 
   return (
-    <div className="flex flex-row items-center justify-center py-20 h-screen md:h-auto dark:bg-black bg-white relative w-full">
-      <div className="max-w-7xl mx-auto w-full relative overflow-hidden h-full md:h-[40rem] px-4 flex flex-row items-start justify-between">
-        <motion.div
-          initial={{
-            opacity: 0,
-            y: 20,
-          }}
-          animate={{
-            opacity: 1,
-            y: 0,
-          }}
-          transition={{
-            duration: 1,
-          }}
-          className="div mt-20"
-        >
-          <h2 className="text-left text-3xl md:text-6xl font-bold text-black dark:text-white font-suse-mono">
-            Your Gateway to AI <br /> & Data Science <br /> at BU.
-          </h2>
-        </motion.div>
-        <motion.div
-          initial={{
-            opacity: 0,
-            y: 20,
-          }}
-          animate={{
-            opacity: 1,
-            y: 0,
-          }}
-          transition={{
-            duration: 1,
-          }}
-          className="div mt-20"
-        >
-          <p className="text-right text-lg md:text-2xl font-normal text-neutral-700 dark:text-neutral-200 max-w-md mx-auto font-poppins">
-            Empowering BU students to explore cutting-edge AI, machine learning, and data science through hands-on projects, research workshops, and competitions.
-          </p>
-        </motion.div>
-        <div className="absolute w-full bottom-0 inset-x-0 h-40 bg-gradient-to-b pointer-events-none select-none from-transparent dark:to-black to-white z-40" />
-        <div className="absolute w-full -bottom-40 h-72 md:h-full z-10">
-          <World data={sampleArcs} globeConfig={globeConfig} />
+    <div ref={containerRef} className="flex flex-row items-center justify-center py-20 h-screen md:h-auto dark:bg-black bg-white relative w-full">
+      <div className="w-full relative h-full md:h-[60rem] px-4 overflow-hidden">
+        <div className="max-w-7xl mx-auto flex flex-row items-start justify-between">
+            <motion.div
+              style={{ opacity }}
+              className="div mt-20"
+            >
+              <h2 className="text-left text-3xl md:text-6xl font-bold text-black dark:text-white font-suse-mono">
+                Your Gateway to AI <br /> & Data Science <br /> at BU.
+              </h2>
+            </motion.div>
+            <motion.div
+              style={{ opacity }}
+              className="div mt-20"
+            >
+              <p className="text-right text-lg md:text-2xl font-normal text-neutral-700 dark:text-gray-500 max-w-md mx-auto font-poppins">
+                Empowering BU students to explore cutting-edge AI, machine learning, and data science through hands-on projects, research workshops, and competitions.
+              </p>
+            </motion.div>
         </div>
+        <div className="absolute w-full bottom-0 inset-x-0 h-40 bg-gradient-to-b pointer-events-none select-none from-transparent dark:to-black to-white z-40" />
+        <motion.div
+          style={{ x, y, scale }}
+          transition={{ type: "tween", ease: "linear", duration: 0.05 }}
+          className="absolute w-full -bottom-40 h-72 md:h-full z-10"
+        >
+          <World data={sampleArcs} globeConfig={globeConfig} />
+        </motion.div>
       </div>
     </div>
   );
