@@ -38,8 +38,22 @@ export function NavbarDemo() {
           <NavbarLogo />
           <NavItems items={navItems} />
           <div className="flex items-center gap-4">
-            <NavbarButton variant="secondary">Highlights</NavbarButton>
-            <NavbarButton variant="primary">Join Community</NavbarButton>
+            {/* <NavbarButton
+              href="https://google.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              variant="secondary"
+            >
+              Highlights
+            </NavbarButton> */}
+            <NavbarButton
+              href="https://chat.whatsapp.com/JmwKQ302xhCGe3rzmWXt1h?mode=ems_copy_t"
+              target="_blank"
+              rel="noopener noreferrer"
+              variant="primary"
+            >
+              Join Community
+            </NavbarButton>
           </div>
         </NavBody>
 
@@ -68,17 +82,23 @@ export function NavbarDemo() {
               </a>
             ))}
             <div className="flex w-full flex-col gap-4">
-              <NavbarButton
+              {/* <NavbarButton
                 onClick={() => setIsMobileMenuOpen(false)}
                 variant="primary"
                 className="w-full"
+                href="https://chat.whatsapp.com/JmwKQ302xhCGe3rzmWXt1h?mode=ems_copy_t"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Highlights
-              </NavbarButton>
+              </NavbarButton> */}
               <NavbarButton
                 onClick={() => setIsMobileMenuOpen(false)}
                 variant="primary"
                 className="w-full"
+                href="https://chat.whatsapp.com/JmwKQ302xhCGe3rzmWXt1h?mode=ems_copy_t"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Join Community
               </NavbarButton>

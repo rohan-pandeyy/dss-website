@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 
 export default function LayoutTextFlipDemo() {
   return (
-    <div className="max-w-6xl mx-auto">
+    <div className="max-w-6xl mx-auto mb-12">
       <motion.div className="relative mx-4 my-4 flex flex-row items-center justify-center gap-4 text-center sm:mx-0 sm:mb-0">
         <LayoutTextFlip
           text="What we "

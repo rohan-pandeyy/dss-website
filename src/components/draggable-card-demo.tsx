@@ -8,21 +8,24 @@ export default function DraggableCardDemo() {
   const items = [
     {
       title: "Aditya Siwach",
+      description: "General Secretary",
       image:
-        "https://images.unsplash.com/photo-1501854140801-50d01698950b?q=80&w=2600&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      className: "absolute top-5 left-[40%] rotate-[8deg] translate-y-30",
+        "/TeamImages/AdityaSiwach.jpg",
+      className: "absolute font-poppins top-40 left-[55%] rotate-[4deg] translate-y-30",
     },
     {
       title: "Rohan Pandey",
+      description: "Vice-President",
       image:
-      "/TeamImages/RohanPandey.jpeg",
-      className: "absolute top-40 left-[55%] rotate-[4deg] translate-y-30",
+        "/TeamImages/RohanPandey.jpeg",
+      className: "absolute font-poppins top-22 left-[25%] rotate-[-6deg] translate-y-30",
     },
     {
       title: "Arya Prakash",
+      description: "President",
       image:
-        "https://images.unsplash.com/photo-1732310216648-603c0255c000?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      className: "absolute top-10 left-[25%] rotate-[-7deg] translate-y-30",
+        "https://cdn.pixabay.com/photo/2015/11/03/09/03/question-mark-1019993_960_720.jpg",
+      className: "absolute font-poppins top-10 left-[40%] rotate-[2deg] translate-y-30",
     },
     // {
     //   title: "Japan",
@@ -54,8 +57,8 @@ export default function DraggableCardDemo() {
       <p className="absolute top-1/2 mx-auto max-w-sm -translate-y-3/4 text-center text-2xl font-black text-neutral-400 md:text-4xl dark:text-neutral-800">
         Senior Core - Revealing soon.
       </p>
-      {items.map((item) => (
-        <DraggableCardBody className={item.className}>
+      {items.map((item: any) => (
+        <DraggableCardBody key={item.title} className={item.className}>
           <img
             src={item.image}
             alt={item.title}
@@ -64,6 +67,9 @@ export default function DraggableCardDemo() {
           <h3 className="mt-4 text-center text-2xl font-bold text-neutral-700 dark:text-neutral-300">
             {item.title}
           </h3>
+          <p className="text-center text-base text-neutral-500 dark:text-neutral-400">
+            {item.description}
+          </p>
         </DraggableCardBody>
       ))}
     </DraggableCardContainer>

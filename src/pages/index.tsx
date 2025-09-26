@@ -8,7 +8,6 @@ export default function Home() {
       <GlobeDemo />
       <BackgroundBeamsDemo />
       <LayoutTextFlipDemo />
-      <div style={{ height: "30vh" }} />
     </div>
   );
 }

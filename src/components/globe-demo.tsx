@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import dynamic from "next/dynamic";
 import { IconBrandInstagram, IconBrandLinkedin, IconBrandWhatsapp } from "@tabler/icons-react";
@@ -15,10 +15,21 @@ export default function GlobeDemo() {
     offset: ["start start", "end start"],
   });
 
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkScreenSize();
+    window.addEventListener("resize", checkScreenSize);
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
+
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
-  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.5]);
-  const x = useTransform(scrollYProgress, [0, 1], [0, 1000]);
-  const y = useTransform(scrollYProgress, [0, 1], [0, 500]);
+  const scale = useTransform(scrollYProgress, [0, 1], isMobile ? [1, 1] : [1, 1.5]);
+  const x = useTransform(scrollYProgress, [0, 1], isMobile ? [0, 0] : [0, 1000]);
+  const y = useTransform(scrollYProgress, [0, 1], isMobile ? [0, 0] : [0, 500]);
 
   const globeConfig = {
     pointSize: 4,
@@ -431,7 +442,7 @@ export default function GlobeDemo() {
         <motion.div
           style={{ x, y, scale }}
           transition={{ type: "tween", ease: "linear", duration: 0.05 }}
-          className="absolute w-full -bottom-40 h-72 md:h-full z-10"
+          className="absolute w-full bottom-30 md:-bottom-40 h-72 md:h-full z-10 flex justify-center -translate-x-4 md:translate-x-0"
         >
           <World data={sampleArcs} globeConfig={globeConfig} />
         </motion.div>
@@ -439,13 +450,13 @@ export default function GlobeDemo() {
       <div className="absolute bottom-40 w-full z-20 px-4">
         <div className="max-w-7xl mx-auto">
             <div className="flex flex-row space-x-4">
-                <a href="#" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.instagram.com/datasciencesociety_bu?igsh=MTZ6MndkYmo2dWtybA==" target="_blank" rel="noopener noreferrer">
                     <IconBrandInstagram className="w-8 h-8 md:w-12 md:h-12 text-white transition-all duration-300 hover:drop-shadow-[0_0_20px_rgba(255,255,255,1)]" />
                 </a>
-                <a href="#" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/company/data-science-society-b-u/" target="_blank" rel="noopener noreferrer">
                     <IconBrandLinkedin className="w-8 h-8 md:w-12 md:h-12 text-white transition-all duration-300 hover:drop-shadow-[0_0_20px_rgba(255,255,255,1)]" />
                 </a>
-                <a href="#" target="_blank" rel="noopener noreferrer">
+                <a href="https://chat.whatsapp.com/JmwKQ302xhCGe3rzmWXt1h?mode=ems_copy_t" target="_blank" rel="noopener noreferrer">
                     <IconBrandWhatsapp className="w-8 h-8 md:w-12 md:h-12 text-white transition-all duration-300 hover:drop-shadow-[0_0_20px_rgba(255,255,255,1)]" />
                 </a>
             </div>
