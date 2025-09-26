@@ -407,7 +407,7 @@ export default function GlobeDemo() {
   ];
 
   return (
-    <div ref={containerRef} className="flex flex-row items-center justify-center py-20 h-screen md:h-auto dark:bg-black bg-white relative w-full">
+    <div ref={containerRef} className="flex flex-row items-center justify-center py-10 h-screen md:h-auto dark:bg-black bg-white relative w-full">
       <div className="w-full relative h-full md:h-[60rem] px-4 overflow-hidden">
         <div className="max-w-7xl mx-auto flex flex-row items-start justify-between">
             <motion.div
@@ -436,17 +436,17 @@ export default function GlobeDemo() {
           <World data={sampleArcs} globeConfig={globeConfig} />
         </motion.div>
       </div>
-      <div className="absolute bottom-40 w-full z-50 px-4">
+      <div className="absolute bottom-40 w-full z-20 px-4">
         <div className="max-w-7xl mx-auto">
-            <div className="flex flex-row space-y-4">
+            <div className="flex flex-row space-x-4">
                 <a href="#" target="_blank" rel="noopener noreferrer">
-                    <IconBrandInstagram className="w-12 h-12 text-white transition-all duration-300 hover:drop-shadow-[0_0_20px_rgba(255,255,255,1)]" />
+                    <IconBrandInstagram className="w-8 h-8 md:w-12 md:h-12 text-white transition-all duration-300 hover:drop-shadow-[0_0_20px_rgba(255,255,255,1)]" />
                 </a>
                 <a href="#" target="_blank" rel="noopener noreferrer">
-                    <IconBrandLinkedin className="w-12 h-12 text-white transition-all duration-300 hover:drop-shadow-[0_0_20px_rgba(255,255,255,1)]" />
+                    <IconBrandLinkedin className="w-8 h-8 md:w-12 md:h-12 text-white transition-all duration-300 hover:drop-shadow-[0_0_20px_rgba(255,255,255,1)]" />
                 </a>
                 <a href="#" target="_blank" rel="noopener noreferrer">
-                    <IconBrandWhatsapp className="w-12 h-12 text-white transition-all duration-300 hover:drop-shadow-[0_0_20px_rgba(255,255,255,1)]" />
+                    <IconBrandWhatsapp className="w-8 h-8 md:w-12 md:h-12 text-white transition-all duration-300 hover:drop-shadow-[0_0_20px_rgba(255,255,255,1)]" />
                 </a>
             </div>
         </div>
