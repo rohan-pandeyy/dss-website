@@ -11,21 +11,21 @@ export default function DraggableCardDemo() {
       description: "General Secretary",
       image:
         "/TeamImages/AdityaSiwach.jpg",
-      className: "absolute font-poppins top-40 left-[55%] rotate-[4deg] translate-y-30",
+      className: "absolute font-poppins top-40 left-[10%] md:left-[55%] rotate-[4deg] translate-y-10 md:translate-y-20",
     },
     {
       title: "Rohan Pandey",
       description: "Vice-President",
       image:
         "/TeamImages/RohanPandey.jpeg",
-      className: "absolute font-poppins top-22 left-[25%] rotate-[-6deg] translate-y-30",
+      className: "absolute font-poppins top-22 left-[8%] md:left-[25%] rotate-[-6deg] translate-y-30",
     },
     {
       title: "Arya Prakash",
       description: "President",
       image:
-        "https://cdn.pixabay.com/photo/2015/11/03/09/03/question-mark-1019993_960_720.jpg",
-      className: "absolute font-poppins top-10 left-[40%] rotate-[2deg] translate-y-30",
+        "/TeamImages/AryaPrakash.jpg",
+      className: "absolute font-poppins top-10 left-[15%] md:left-[40%] rotate-[2deg] translate-y-30",
     },
     // {
     //   title: "Japan",

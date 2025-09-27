@@ -3,6 +3,7 @@ import React, { useRef, useState, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import dynamic from "next/dynamic";
 import { IconBrandInstagram, IconBrandLinkedin, IconBrandWhatsapp } from "@tabler/icons-react";
+import { cn } from "@/lib/utils";
 
 const World = dynamic(() => import("@/components/ui/globe").then((m) => m.World), {
   ssr: false,
@@ -444,6 +445,7 @@ export default function GlobeDemo() {
           transition={{ type: "tween", ease: "linear", duration: 0.05 }}
           className="absolute w-full bottom-30 md:-bottom-40 h-72 md:h-full z-10 flex justify-center -translate-x-4 md:translate-x-0"
         >
+          {isMobile && <div className="absolute inset-0 z-10" />} 
           <World data={sampleArcs} globeConfig={globeConfig} />
         </motion.div>
       </div>

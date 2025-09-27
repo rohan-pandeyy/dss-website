@@ -16,8 +16,19 @@ export default function Footer() {
               <img src="https://www.bennett.edu.in/wp-content/uploads/2025/01/NAAC-Logo-2025-webp-1.webp" alt="Bennett University Logo" className="h-16 p-2 rounded" />
             </div>
           </div>
-          <p className="text-neutral-600 dark:text-neutral-400 text-sm text-center md:text-left">
+          <p className="font-poppins text-neutral-600 dark:text-neutral-400 text-sm text-center md:text-left">
             © {new Date().getFullYear()} Data Science Society. All rights reserved.
+          </p>
+          <p className="text-neutral-600 dark:text-neutral-400 text-sm text-center md:text-left mt-2">
+            Made with ❤️ by{' '}
+            <a
+              href="https://rohan-pandeyy.github.io/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-poppins hover:text-neutral-800 underline dark:hover:text-neutral-200 transition-colors"
+            >
+              Rohan Pandey
+            </a>
           </p>
         </div>
 
