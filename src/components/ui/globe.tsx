@@ -62,6 +62,7 @@ interface WorldProps {
 
 export function Globe({ globeConfig, data }: WorldProps) {
   const globeRef = useRef<ThreeGlobe | null>(null);
+  const groupRef = useRef<THREE.Group>(null);
   const [isInitialized, setIsInitialized] = useState(false);
 
   const defaultProps = {
@@ -82,10 +83,13 @@ export function Globe({ globeConfig, data }: WorldProps) {
   };
 
   useEffect(() => {
-    if (globeRef.current) {
+    if (groupRef.current && !globeRef.current) {
+      const globe = new ThreeGlobe();
+      groupRef.current.add(globe);
+      globeRef.current = globe;
       setIsInitialized(true);
     }
-  }, [globeRef]);
+  }, [groupRef]);
 
   useEffect(() => {
     if (globeRef.current && isInitialized) {
@@ -201,7 +205,7 @@ export function Globe({ globeConfig, data }: WorldProps) {
     };
   }, [isInitialized, data]);
 
-  return <threeGlobe ref={globeRef} />;
+  return <group ref={groupRef} />;
 }
 
 export function WebGLRendererConfig() {
