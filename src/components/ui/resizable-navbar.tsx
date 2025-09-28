@@ -256,7 +256,6 @@ export const NavbarButton = ({
 }: {
   href?: string;
   as?: React.ElementType;
-  children: React.ReactNode;
   className?: string;
   variant?: "primary" | "secondary" | "dark" | "gradient";
 } & (
