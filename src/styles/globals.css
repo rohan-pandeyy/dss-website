@@ -9,6 +9,10 @@
   --spacing: 0.25rem;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: black;
 }

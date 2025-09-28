@@ -6,7 +6,9 @@ export default function Home() {
   return (
     <div>
       <GlobeDemo />
-      <BackgroundBeamsDemo />
+      <div id="junior-core-forms-waitlist">
+        <BackgroundBeamsDemo />
+      </div>
       <LayoutTextFlipDemo />
     </div>
   );
