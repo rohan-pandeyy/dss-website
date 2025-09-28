@@ -249,7 +249,6 @@ export const NavbarLogo = () => {
 export const NavbarButton = ({
   href,
   as: Tag = "a",
-  children,
   className,
   variant = "primary",
   ...props
@@ -279,8 +278,6 @@ export const NavbarButton = ({
       href={href || undefined}
       className={cn(baseStyles, variantStyles[variant], className)}
       {...props}
-    >
-      {children}
-    </Tag>
+    />
   );
 };
