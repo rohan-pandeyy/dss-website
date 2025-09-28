@@ -24,7 +24,7 @@ export function NavbarDemo() {
     },
     {
       name: "Events",
-      link: "#events",
+      link: "/events",
     },
   ];
 
