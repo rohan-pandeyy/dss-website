@@ -253,7 +253,7 @@ export const NavbarButton = ({
   variant = "primary",
   ...props
 }: {
-  as?: React.ElementType;
+  as?: "a" | "button";
   children?: React.ReactNode;
   className?: string;
   variant?: "primary" | "secondary" | "dark" | "gradient";
@@ -273,12 +273,23 @@ export const NavbarButton = ({
       "bg-gradient-to-b from-blue-500 to-blue-700 text-white shadow-[0px_2px_0px_0px_rgba(255,255,255,0.3)_inset]",
   };
 
+  if (Tag === "button") {
+    return (
+      <button
+        className={cn(baseStyles, variantStyles[variant], className)}
+        {...props as React.ComponentPropsWithoutRef<"button">}
+      >
+        {children}
+      </button>
+    );
+  }
+
   return (
-    <Tag
+    <a
       className={cn(baseStyles, variantStyles[variant], className)}
-      {...props}
+      {...props as React.ComponentPropsWithoutRef<"a">}
     >
       {children}
-    </Tag>
+    </a>
   );
 };
