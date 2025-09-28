@@ -4,8 +4,15 @@ import {
   DraggableCardContainer,
 } from "@/components/ui/draggable-card";
 
+interface Item {
+  title: string;
+  description: string;
+  image: string;
+  className: string;
+}
+
 export default function DraggableCardDemo() {
-  const items = [
+  const items: Item[] = [
     {
       title: "Aditya Siwach",
       description: "General Secretary",
@@ -57,7 +64,7 @@ export default function DraggableCardDemo() {
       <p className="absolute top-1/2 mx-auto max-w-sm -translate-y-3/4 text-center text-2xl font-black text-neutral-400 md:text-4xl dark:text-neutral-800">
         Senior Core - Revealing soon.
       </p>
-      {items.map((item: any) => (
+      {items.map((item) => (
         <DraggableCardBody key={item.title} className={item.className}>
           <img
             src={item.image}
