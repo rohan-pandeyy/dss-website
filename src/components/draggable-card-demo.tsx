@@ -22,14 +22,14 @@ export default function DraggableCardDemo() {
     },
     {
       title: "Rohan Pandey",
-      description: "Vice-President",
+      description: "Vice-Chairperson",
       image:
         "/TeamImages/RohanPandey.jpeg",
       className: "absolute font-poppins top-22 left-[8%] md:left-[25%] rotate-[-6deg] translate-y-30",
     },
     {
       title: "Arya Prakash",
-      description: "President",
+      description: "Chairperson",
       image:
         "/TeamImages/AryaPrakash.jpg",
       className: "absolute font-poppins top-10 left-[15%] md:left-[40%] rotate-[2deg] translate-y-30",
