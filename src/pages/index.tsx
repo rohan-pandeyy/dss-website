@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div>
       <GlobeDemo />
-      <div id="highlight">
+      <div id="whats-hot">
         <BackgroundBeamsDemo />
       </div>
       <LayoutTextFlipDemo />
