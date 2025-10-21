@@ -25,7 +25,7 @@ export default function DraggableCardDemo() {
       title: "Rohan Pandey",
       description: "Vice-Chairperson",
       image:
-        "/TeamImages/RohanPandey.jpeg",
+        "/TeamImages/ROHANPANDEY.png",
       className: "absolute font-poppins top-22 left-[8%] md:left-[25%] rotate-[-6deg] translate-y-30",
     },
     {
