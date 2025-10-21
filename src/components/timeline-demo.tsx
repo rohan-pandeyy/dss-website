@@ -17,10 +17,10 @@ export default function TimelineDemo() {
         "Inspired by the high-stakes excitement of Squid Game, this event challenged participants to tackle a series of data-driven tasks, each round testing their analytical skills, creativity, and teamwork, aiming to promote data literacy, problem-solving, and collaborative thinking in an engaging and dynamic environment.",
       images: [
         "/Events/DataQuest/1.jpg",
-        "/Events/DataQuest/2.JPG",
+        "/Events/DataQuest/2.jpg",
         "/Events/DataQuest/3.jpg",
         "/Events/DataQuest/4.jpg",
-        "/Events/DataQuest/5.JPG",
+        "/Events/DataQuest/5.jpg",
       ],
     },
     {
