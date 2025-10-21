@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="w-full md:w-auto flex flex-col items-center md:items-start">
           <div className="flex flex-col items-center md:flex-row md:items-center md:space-x-4 mb-4">
             <div className="flex space-x-4">
-              <Image src="/dssWHITE_.png" alt="Data Science Society Logo" width={86} height={64} />
+              <Image src="/dssWHITE_.png" alt="Data Science Society Logo" width={86} height={64} style={{ width: 'auto' }} />
               <Image src="/cabinet-logo-white.png" alt="Student Cabinet Logo" width={220} height={64} className="p-2 rounded" />
             </div>
             <div className="mt-4 md:mt-0">
