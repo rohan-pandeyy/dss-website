@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useMemo } from "react";
 import { Color, Scene, Fog, PerspectiveCamera, Vector3 } from "three";
 import * as THREE from "three";
 import ThreeGlobe from "three-globe";
@@ -66,22 +66,25 @@ export function Globe({ globeConfig, data }: WorldProps) {
   const groupRef = useRef<THREE.Group>(null);
   const [isInitialized, setIsInitialized] = useState(false);
 
-  const defaultProps = {
-    pointSize: 1,
-    atmosphereColor: "#ffffff",
-    showAtmosphere: true,
-    atmosphereAltitude: 0.1,
-    polygonColor: "rgba(255,255,255,0.7)",
-    globeColor: "#1d072e",
-    emissive: "#000000",
-    emissiveIntensity: 0.1,
-    shininess: 0.9,
-    arcTime: 2000,
-    arcLength: 0.9,
-    rings: 1,
-    maxRings: 3,
-    ...globeConfig,
-  };
+  const defaultProps = useMemo(
+    () => ({
+      pointSize: 1,
+      atmosphereColor: "#ffffff",
+      showAtmosphere: true,
+      atmosphereAltitude: 0.1,
+      polygonColor: "rgba(255,255,255,0.7)",
+      globeColor: "#1d072e",
+      emissive: "#000000",
+      emissiveIntensity: 0.1,
+      shininess: 0.9,
+      arcTime: 2000,
+      arcLength: 0.9,
+      rings: 1,
+      maxRings: 3,
+      ...globeConfig,
+    }),
+    [globeConfig]
+  );
 
   useEffect(() => {
     if (groupRef.current && !globeRef.current) {
