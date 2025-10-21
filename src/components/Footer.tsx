@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { IconMail, IconBrandInstagram, IconBrandLinkedin } from "@tabler/icons-react";
 
 export default function Footer() {
@@ -9,11 +10,11 @@ export default function Footer() {
         <div className="w-full md:w-auto flex flex-col items-center md:items-start">
           <div className="flex flex-col items-center md:flex-row md:items-center md:space-x-4 mb-4">
             <div className="flex space-x-4">
-              <img src="/dssWHITE_.png" alt="Data Science Society Logo" className="h-16" />
-              <img src="/cabinet-logo-white.png" alt="Student Cabinet Logo" className="h-16 p-2 rounded" />
+              <Image src="/dssWHITE_.png" alt="Data Science Society Logo" width={86} height={64} />
+              <Image src="/cabinet-logo-white.png" alt="Student Cabinet Logo" width={220} height={64} className="p-2 rounded" />
             </div>
             <div className="mt-4 md:mt-0">
-              <img src="https://www.bennett.edu.in/wp-content/uploads/2025/01/NAAC-Logo-2025-webp-1.webp" alt="Bennett University Logo" className="h-16 p-2 rounded" />
+              <Image src="/NAAC-Logo-2025.png" alt="Bennett University Logo" width={286} height={64} className="p-2 rounded" />
             </div>
           </div>
           <p className="font-poppins text-neutral-600 dark:text-neutral-400 text-sm text-center md:text-left">
