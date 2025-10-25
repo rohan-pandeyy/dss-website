@@ -15,6 +15,104 @@ interface Item {
 export default function DraggableCardDemo() {
   const items: Item[] = [
     {
+      title: "Mansimer Singh",
+      description: "Sub-Head of Operations & Management Department",
+      image:
+        "/TeamImages/MansimerSingh.jpg",
+      className: "absolute font-poppins top-25 left-[14%] md:left-[35%] rotate-[-6deg] translate-y-30",
+    },
+    {
+      title: "Dhruv Agarwal",
+      description: "Head of Operations & Management Department",
+      image:
+        "/TeamImages/DhruvAgarwal.jpg",
+      className: "absolute font-poppins top-25 left-[14%] md:left-[46%] rotate-[6deg] translate-y-30",
+    },
+    // {
+    //   title: "Arnav Thakur",
+    //   description: "Head of Sponsorship",
+    //   image:
+    //     "https://cdnb.artstation.com/p/assets/images/images/084/124/303/large/matthew-blank-profile-photo-1-1.jpg?1737590055",
+    //   className: "absolute font-poppins top-18 left-[8%] md:left-[56%] rotate-[4deg] translate-y-30",
+    // },
+    {
+      title: "Praney Wadhwa",
+      description: "Head of PR & Outreach",
+      image:
+        "/TeamImages/PraneyWadhwa.jpg",
+      className: "absolute font-poppins top-30 md:right-[20%] rotate-[-3deg] translate-y-30",
+    },
+    {
+      title: "Siddhi Sanap",
+      description: "Sub-Head of Media Department",
+      image:
+        "/TeamImages/SiddhiSanap.jpg",
+      className: "absolute font-poppins top-25 left-[14%] md:left-[39%] rotate-[-6deg] translate-y-30",
+    },
+    {
+      title: "Rishika Chauhan",
+      description: "Sub-Head of Media Department",
+      image:
+        "/TeamImages/RishikaChauhan.jpg",
+      className: "absolute font-poppins top-29 left-[14%] md:left-[39%] rotate-[0deg] translate-y-30",
+    },
+    {
+      title: "Sumukh Gupta",
+      description: "Head of Media Department",
+      image:
+        "/TeamImages/SumukhGupta.jpg",
+      className: "absolute font-poppins top-20 left-[14%] md:left-[41%] rotate-[-3deg] translate-y-30",
+    },
+    // {
+    //   title: "Aradhya Kumar Rao",
+    //   description: "Sub-Head of Design Department",
+    //   image:
+    //     "https://cdnb.artstation.com/p/assets/images/images/084/124/303/large/matthew-blank-profile-photo-1-1.jpg?1737590055",
+    //   className: "absolute font-poppins top-30 md:right-[27%] rotate-[2deg] translate-y-30",
+    // },
+    {
+      title: "Pranith Varma",
+      description: "Head of Design Department",
+      image:
+        "/TeamImages/PranithVarma.jpg",
+      className: "absolute font-poppins top-30 md:top-38 md:left-[57%] rotate-[-7deg] translate-y-30",
+    },
+    {
+      title: "Suhani Rastogi",
+      description: "Head of Content Department",
+      image:
+        "/TeamImages/SuhaniRastogi.jpg",
+      className: "absolute font-poppins top-22 md:left-[60%] md:rotate-[4deg] rotate-[-4deg] translate-y-30 md:translate-y-20",
+    },
+    {
+      title: "Jatin Sharma",
+      description: "Head of Statistics Department",
+      image:
+        "/TeamImages/JatinSharma.jpg",
+      className: "absolute font-poppins top-28 md:left-[25%] left-[10%] rotate-[10deg] translate-y-30",
+    },
+    {
+      title: "Rhea Mathur",
+      description: "Head of Data Analysis Department",
+      image:
+        "/TeamImages/RheaMathur.jpg",
+      className: "absolute font-poppins top-20 md:right-[65%] rotate-[-3deg] translate-y-30",
+    },
+    {
+      title: "Mayank Singh",
+      description: "Head of Machine Learning Department",
+      image:
+        "/TeamImages/MayankSingh.jpg",
+      className: "absolute font-poppins top-21 md:top-35 md:left-[23%] rotate-[9deg] translate-y-30",
+    },
+    {
+      title: "Taruvar Singhal",
+      description: "Chief Technical Officer",
+      image:
+        "/TeamImages/TaruvarSinghal.jpg",
+      className: "absolute font-poppins top-25 md:left-[25%] md:rotate-[4deg] rotate-[-4deg] translate-y-30 md:translate-y-20",
+    },
+    {
       title: "Aditya Siwach",
       description: "General Secretary",
       image:
@@ -26,44 +124,20 @@ export default function DraggableCardDemo() {
       description: "Vice-Chairperson",
       image:
         "/TeamImages/ROHANPANDEY.png",
-      className: "absolute font-poppins top-22 left-[8%] md:left-[25%] rotate-[-6deg] translate-y-30",
+      className: "absolute font-poppins top-22 left-[8%] md:left-[24%] rotate-[-6deg] translate-y-30",
     },
     {
       title: "Arya Prakash",
       description: "Chairperson",
       image:
         "/TeamImages/AryaPrakash.jpg",
-      className: "absolute font-poppins top-10 left-[15%] md:left-[40%] rotate-[2deg] translate-y-30",
+      className: "absolute font-poppins top-19 md:top-10 left-[14%] md:left-[40%] rotate-[2deg] translate-y-30",
     },
-    // {
-    //   title: "Japan",
-    //   image:
-    //     "https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?q=80&w=3648&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    //   className: "absolute top-32 left-[55%] rotate-[10deg] translate-y-30",
-    // },
-    // {
-    //   title: "Norway",
-    //   image:
-    //     "https://images.unsplash.com/photo-1421789665209-c9b2a435e3dc?q=80&w=3542&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    //   className: "absolute top-20 right-[35%] rotate-[2deg] translate-y-30",
-    // },
-    // {
-    //   title: "New Zealand",
-    //   image:
-    //     "https://images.unsplash.com/photo-1505142468610-359e7d316be0?q=80&w=3070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    //   className: "absolute top-24 left-[45%] rotate-[-7deg] translate-y-30",
-    // },
-    // {
-    //   title: "Canada",
-    //   image:
-    //     "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    //   className: "absolute top-8 left-[30%] rotate-[4deg] translate-y-30",
-    // },
   ];
   return (
     <DraggableCardContainer className="relative flex h-screen w-full items-center justify-center overflow-clip">
       <p className="absolute top-1/2 mx-auto max-w-sm -translate-y-3/4 text-center text-2xl font-black text-neutral-400 md:text-4xl dark:text-neutral-800">
-        Senior Core - Revealing soon.
+        ~ Team DSS
       </p>
       {items.map((item) => (
         <DraggableCardBody key={item.title} className={item.className}>
