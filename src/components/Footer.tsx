@@ -45,9 +45,9 @@ export default function Footer() {
               <IconBrandInstagram size={20} />
               <span>@datasciencesociety_bu</span>
             </a>
-            <a href="https://www.linkedin.com/company/data-science-society-b-u" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 text-neutral-600 dark:text-neutral-400 hover:text-neutral-800 dark:hover:text-neutral-200 transition-colors">
+            <a href="https://www.linkedin.com/company/dss-bu" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 text-neutral-600 dark:text-neutral-400 hover:text-neutral-800 dark:hover:text-neutral-200 transition-colors">
               <IconBrandLinkedin size={20} />
-              <span>@data-science-society-b-u</span>
+              <span>@dss-bu</span>
             </a>
           </div>
         </div>
