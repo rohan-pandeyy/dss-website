@@ -39,7 +39,7 @@ export default function GlobeDemo() {
     setIsAnimated(isToggled);
   };
 
-  const globeConfig = {
+  const globeConfig = React.useMemo(() => ({
     pointSize: 4,
     globeColor: "#062056",
     showAtmosphere: true,
@@ -60,7 +60,7 @@ export default function GlobeDemo() {
     initialPosition: { lat: 22.3193, lng: 114.1694 },
     autoRotate: isAnimated,
     autoRotateSpeed: isAnimated ? 0.5 : 0,
-  };
+  }), [isAnimated]);
   const colors = ["#06b6d4", "#3b82f6", "#6366f1"];
   const sampleArcs = [
     {
@@ -425,6 +425,8 @@ export default function GlobeDemo() {
     },
   ];
 
+  const arcsData = React.useMemo(() => (isAnimated ? sampleArcs : []), [isAnimated]);
+
   return (
     <div ref={containerRef} className="flex flex-row items-center justify-center py-10 h-screen md:h-auto dark:bg-black bg-white relative w-full">
       <div className="w-full relative h-full md:h-[60rem] px-4 overflow-hidden">
@@ -464,7 +466,7 @@ export default function GlobeDemo() {
           className="absolute w-full bottom-30 md:-bottom-40 h-72 md:h-full z-10 flex justify-center -translate-x-4 md:translate-x-0"
         >
           {isMobile && <div className="absolute inset-0 z-10" />} 
-          <World data={isAnimated ? sampleArcs : []} globeConfig={globeConfig} />
+          <World key={isAnimated ? 'animated' : 'static'} data={arcsData} globeConfig={globeConfig} />
         </motion.div>
       </div>
       <div className="absolute bottom-40 w-full z-20 px-4">
