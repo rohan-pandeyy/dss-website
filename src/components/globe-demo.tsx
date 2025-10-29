@@ -3,6 +3,7 @@ import React, { useRef, useState, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import dynamic from "next/dynamic";
 import { IconBrandInstagram, IconBrandLinkedin, IconBrandWhatsapp } from "@tabler/icons-react";
+import { ToggleSwitch } from "@/components/ui/toggle-switch";
 
 
 const World = dynamic(() => import("@/components/ui/globe").then((m) => m.World), {
@@ -31,6 +32,10 @@ export default function GlobeDemo() {
   const scale = useTransform(scrollYProgress, [0, 1], isMobile ? [1, 1] : [1, 1.5]);
   const x = useTransform(scrollYProgress, [0, 1], isMobile ? [0, 0] : [0, 1000]);
   const y = useTransform(scrollYProgress, [0, 1], isMobile ? [0, 0] : [0, 500]);
+
+  const handleToggle = (isToggled: boolean) => {
+    console.log("Animation Toggled:", isToggled);
+  };
 
   const globeConfig = {
     pointSize: 4,
@@ -450,7 +455,7 @@ export default function GlobeDemo() {
         </motion.div>
       </div>
       <div className="absolute bottom-40 w-full z-20 px-4">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto flex justify-between items-center">
             <div className="flex flex-row space-x-4">
                 <a href="https://www.instagram.com/datasciencesociety_bu?igsh=MTZ6MndkYmo2dWtybA==" target="_blank" rel="noopener noreferrer">
                     <IconBrandInstagram className="w-8 h-8 md:w-12 md:h-12 text-white transition-all duration-300 hover:drop-shadow-[0_0_20px_rgba(255,255,255,1)]" />
@@ -461,6 +466,10 @@ export default function GlobeDemo() {
                 <a href="https://chat.whatsapp.com/JmwKQ302xhCGe3rzmWXt1h?mode=ems_copy_t" target="_blank" rel="noopener noreferrer">
                     <IconBrandWhatsapp className="w-8 h-8 md:w-12 md:h-12 text-white transition-all duration-300 hover:drop-shadow-[0_0_20px_rgba(255,255,255,1)]" />
                 </a>
+            </div>
+            <div className="flex flex-col md:flex-row justify-end items-center md:space-x-2">
+              <span className="text-white font-poppins text-lg">Animation</span>
+              <ToggleSwitch onToggle={handleToggle} />
             </div>
         </div>
       </div>
