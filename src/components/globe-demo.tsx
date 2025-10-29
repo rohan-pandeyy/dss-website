@@ -33,8 +33,10 @@ export default function GlobeDemo() {
   const x = useTransform(scrollYProgress, [0, 1], isMobile ? [0, 0] : [0, 1000]);
   const y = useTransform(scrollYProgress, [0, 1], isMobile ? [0, 0] : [0, 500]);
 
+  const [isAnimated, setIsAnimated] = React.useState(true);
+
   const handleToggle = (isToggled: boolean) => {
-    console.log("Animation Toggled:", isToggled);
+    setIsAnimated(isToggled);
   };
 
   const globeConfig = {
@@ -56,8 +58,8 @@ export default function GlobeDemo() {
     rings: 1,
     maxRings: 3,
     initialPosition: { lat: 22.3193, lng: 114.1694 },
-    autoRotate: true,
-    autoRotateSpeed: 0.5,
+    autoRotate: isAnimated,
+    autoRotateSpeed: isAnimated ? 0.5 : 0,
   };
   const colors = ["#06b6d4", "#3b82f6", "#6366f1"];
   const sampleArcs = [
@@ -427,14 +429,25 @@ export default function GlobeDemo() {
     <div ref={containerRef} className="flex flex-row items-center justify-center py-10 h-screen md:h-auto dark:bg-black bg-white relative w-full">
       <div className="w-full relative h-full md:h-[60rem] px-4 overflow-hidden">
         <div className="max-w-7xl mx-auto flex flex-row items-start justify-between">
-            <motion.div
-              style={{ opacity }}
-              className="div mt-20"
-            >
-              <h2 className="text-left text-3xl md:text-6xl font-bold text-black dark:text-white font-suse-mono">
-                Your Gateway to AI <br /> & Data Science <br /> at BU.
-              </h2>
-            </motion.div>
+          <motion.div
+            initial={{
+              opacity: isAnimated ? 0 : 1,
+              y: isAnimated ? 20 : 0,
+            }}
+            animate={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              duration: isAnimated ? 1 : 0,
+            }}            
+            style={{ opacity }}
+            className="div mt-20"
+          >
+            <h2 className="text-left text-3xl md:text-6xl font-bold text-black dark:text-white font-suse-mono">
+              Your Gateway to AI <br /> & Data Science <br /> at BU.
+            </h2>
+          </motion.div>
             <motion.div
               style={{ opacity }}
               className="div mt-20"
@@ -451,7 +464,7 @@ export default function GlobeDemo() {
           className="absolute w-full bottom-30 md:-bottom-40 h-72 md:h-full z-10 flex justify-center -translate-x-4 md:translate-x-0"
         >
           {isMobile && <div className="absolute inset-0 z-10" />} 
-          <World data={sampleArcs} globeConfig={globeConfig} />
+          <World data={isAnimated ? sampleArcs : []} globeConfig={globeConfig} />
         </motion.div>
       </div>
       <div className="absolute bottom-40 w-full z-20 px-4">
