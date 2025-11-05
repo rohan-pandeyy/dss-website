@@ -63,13 +63,13 @@ export default function DraggableCardDemo() {
         "/TeamImages/SumukhGupta.jpg",
       className: "absolute font-poppins top-20 left-[14%] md:left-[41%] rotate-[-3deg] translate-y-30",
     },
-    // {
-    //   title: "Aradhya Kumar Rao",
-    //   description: "Sub-Head of Design Department",
-    //   image:
-    //     "https://cdnb.artstation.com/p/assets/images/images/084/124/303/large/matthew-blank-profile-photo-1-1.jpg?1737590055",
-    //   className: "absolute font-poppins top-30 md:right-[27%] rotate-[2deg] translate-y-30",
-    // },
+    {
+      title: "Aradhya Kumar Rao",
+      description: "Sub-Head of Design Department",
+      image:
+        "/TeamImages/AradhyaKumar.jpg",
+      className: "absolute font-poppins top-30 md:right-[27%] rotate-[2deg] translate-y-30",
+    },
     {
       title: "Pranith Varma",
       description: "Head of Design Department",
