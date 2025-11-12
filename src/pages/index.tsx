@@ -1,4 +1,4 @@
-// import BackgroundBeamsDemo from "@/components/background-beams-demo";
+import HoverBorderGradientDemo from "@/components/hover-border-gradient-demo";
 import GlobeDemo from "@/components/globe-demo";
 import LayoutTextFlipDemo from "@/components/layout-text-flip-demo";
 
@@ -7,7 +7,7 @@ export default function Home() {
     <div>
       <GlobeDemo />
       <div id="whats-hot">
-        {/* <BackgroundBeamsDemo /> */}
+        <HoverBorderGradientDemo />
       </div>
       <LayoutTextFlipDemo />
     </div>
