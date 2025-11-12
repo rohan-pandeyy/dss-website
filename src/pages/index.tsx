@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div>
       <GlobeDemo />
-      <div id="whats-hot">
+      <div id="whats-hot" className="-translate-y-40 md:-translate-y-10">
         <HoverBorderGradientDemo />
       </div>
       <LayoutTextFlipDemo />
