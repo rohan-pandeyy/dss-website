@@ -9,12 +9,6 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/**', // Allow any path from this hostname
       },
-      {
-        protocol: 'https',
-        hostname: 'tr.rbxcdn.com',
-        port: '',
-        pathname: '/**',
-      },
     ],
   },
 };

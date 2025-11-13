@@ -12,7 +12,8 @@ import AnimatedModalDemo from "@/components/animated-modal-demo";
 export default function HoverBorderGradientDemo() {
   return (
     <div className="md:translate-y-0 w-full rounded-md bg-black relative flex flex-col items-center justify-center antialiased">
-      <h1 className="mt-30 relative z-10 text-4xl md:text-7xl bg-clip-text text-transparent text-center font-sans font-bold">
+      <h1 className="mt-30 relative z-10 text-4xl md:text-7xl text-transparent [-webkit-text-stroke:0.4px_silver] text-center font-sans font-bold">Upcoming Event</h1>
+      <h1 className="mt-10 relative z-10 text-4xl md:text-7xl bg-clip-text text-transparent text-center font-sans font-bold">
         {/* Mobile view */}
         <div className="flex flex-col items-center md:hidden">
           <Image
@@ -62,7 +63,7 @@ export default function HoverBorderGradientDemo() {
             <div className="relative">
               <DraggableCardBody className="w-full max-w-xs mx-auto">
                 <Image
-                  src="https://tr.rbxcdn.com/180DAY-4b96c13de686380e1c186be04aa2e409/420/420/Hat/Webp/noFilter"
+                  src="/Events/GoogleCrowdsource_NoCodeAITrainingWorkshop/MrHarshitGoyal.jpg"
                   alt="Mr. Harshit Goyal"
                   width={320}
                   height={320}
@@ -105,14 +106,19 @@ export default function HoverBorderGradientDemo() {
             <br />
           </p>
           <div className="flex justify-center text-center">
-            <HoverBorderGradient
-              containerClassName="rounded-full"
-              as="button"
-              className="dark:bg-black bg-white text-black dark:text-white flex cursor-pointer items-center space-x-2"
+            <a
+              href="https://rsvp.withgoogle.com/events/crowdsource-learning-community/forms/registration"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <AceternityLogo />
-              <span>Register Here</span>
-            </HoverBorderGradient>
+              <HoverBorderGradient
+                  containerClassName="rounded-full"
+                  className="dark:bg-black bg-white text-black dark:text-white flex cursor-pointer items-center space-x-2"
+                >
+                  <AceternityLogo />
+                  <span>Register Here</span>
+                </HoverBorderGradient>
+            </a>
           </div>
           <AnimatedModalDemo />
         </div>
@@ -125,7 +131,7 @@ export default function HoverBorderGradientDemo() {
             <div className="relative">
               <DraggableCardBody className="w-full max-w-xs mx-auto">
                 <Image
-                  src="https://tr.rbxcdn.com/180DAY-4b96c13de686380e1c186be04aa2e409/420/420/Hat/Webp/noFilter"
+                  src="/Events/GoogleCrowdsource_NoCodeAITrainingWorkshop/MrNirmitAhuja.jpg"
                   alt="Mr. Nirmit Ahuja"
                   width={320}
                   height={320}
