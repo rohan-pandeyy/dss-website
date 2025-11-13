@@ -7,7 +7,6 @@ import {
   DraggableCardBody,
   DraggableCardContainer,
 } from "@/components/ui/draggable-card";
-import AnimatedModalDemo from "@/components/animated-modal-demo";
 
 export default function HoverBorderGradientDemo() {
   return (
@@ -120,7 +119,6 @@ export default function HoverBorderGradientDemo() {
                 </HoverBorderGradient>
             </a>
           </div>
-          {/* <AnimatedModalDemo /> */}
         </div>
 
         <div className="order-3 md:order-3 mt-2 text-center">
