@@ -21,7 +21,7 @@ export function HoverBorderGradient({
     className?: string;
     duration?: number;
     clockwise?: boolean;
-  } & React.HTMLAttributes<HTMLElement>
+  } & Omit<React.HTMLAttributes<HTMLElement>, 'children'>
 >) {
   const [hovered, setHovered] = useState<boolean>(false);
   const [direction, setDirection] = useState<Direction>("TOP");
@@ -55,9 +55,10 @@ export function HoverBorderGradient({
       return () => clearInterval(interval);
     }
   }, [hovered]);
+  const TagElement = Tag as any;
   return (
-    <Tag
-      onMouseEnter={(event: React.MouseEvent<HTMLDivElement>) => {
+    <TagElement
+      onMouseEnter={(_event: React.MouseEvent) => {
         setHovered(true);
       }}
       onMouseLeave={() => setHovered(false)}
@@ -65,7 +66,7 @@ export function HoverBorderGradient({
         "relative flex rounded-full border  content-center bg-black/20 hover:bg-black/10 transition duration-500 dark:bg-white/20 items-center flex-col flex-nowrap gap-10 h-min justify-center overflow-visible p-px decoration-clone w-fit",
         containerClassName
       )}
-      {...props}
+      {...(props as any)}
     >
       <div
         className={cn(
@@ -94,6 +95,6 @@ export function HoverBorderGradient({
         transition={{ ease: "linear", duration: duration ?? 1 }}
       />
       <div className="bg-black absolute z-1 flex-none inset-[2px] rounded-[100px]" />
-    </Tag>
+    </TagElement>
   );
 }
