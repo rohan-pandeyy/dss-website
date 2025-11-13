@@ -120,7 +120,7 @@ export default function HoverBorderGradientDemo() {
                 </HoverBorderGradient>
             </a>
           </div>
-          <AnimatedModalDemo />
+          {/* <AnimatedModalDemo /> */}
         </div>
 
         <div className="order-3 md:order-3 mt-2 text-center">
