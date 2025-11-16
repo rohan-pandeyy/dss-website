@@ -24,6 +24,13 @@ export default function HoverBorderGradientDemo() {
           />
           <span className="bg-clip-text bg-gradient-to-b from-neutral-200 to-neutral-600">&#215;</span>
           <Image
+            src="/Assets/google_crowdsource.svg"
+            alt="Google Logo"
+            width={596}
+            height={194.5}
+            className="h-10 w-auto my-2"
+          />
+          <Image
             src="/Assets/google.svg"
             alt="Google Logo"
             width={596}
@@ -43,6 +50,13 @@ export default function HoverBorderGradientDemo() {
             className="h-14 w-auto mx-2 translate-y-1"
           />
           <span className="bg-clip-text bg-gradient-to-b from-neutral-200 to-neutral-600">&#215;</span>
+          <Image
+            src="/Assets/google_crowdsource.svg"
+            alt="Google Logo"
+            width={596}
+            height={194.5}
+            className="h-15 w-auto my-2"
+          />
           <Image
             src="/Assets/google.svg"
             alt="Google Logo"
@@ -87,7 +101,7 @@ export default function HoverBorderGradientDemo() {
             <br />
             Join us for an exciting two-hour interactive workshop/ hands-on
             session powered by Google Crowdsource, where you&apos;ll discover
-            Google trains it&apos;s AI models, even how you can help train &
+            how Google trains it&apos;s AI models, even how you can help train &
             improve Google&apos;s AI - no coding required!
             <br />
             <br />
