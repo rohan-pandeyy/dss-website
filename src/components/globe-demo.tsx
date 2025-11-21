@@ -475,7 +475,7 @@ export default function GlobeDemo() {
                 <a href="https://github.com/dss-bu" target="_blank" rel="noopener noreferrer">
                     <IconBrandGithub className="w-8 h-8 md:w-12 md:h-12 text-white transition-all duration-300 hover:drop-shadow-[0_0_20px_rgba(255,255,255,1)]" />
                 </a>
-                <a href="https://www.instagram.com/datasciencesociety_bu?igsh=MTZ6MndkYmo2dWtybA==" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.instagram.com/dss_bu" target="_blank" rel="noopener noreferrer">
                     <IconBrandInstagram className="w-8 h-8 md:w-12 md:h-12 text-white transition-all duration-300 hover:drop-shadow-[0_0_20px_rgba(255,255,255,1)]" />
                 </a>
                 <a href="https://www.linkedin.com/company/dss-bu/" target="_blank" rel="noopener noreferrer">

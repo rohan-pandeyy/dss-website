@@ -6,9 +6,9 @@ export default function Home() {
   return (
     <div>
       <GlobeDemo />
-      <div id="whats-hot" className="-translate-y-40 md:-translate-y-10">
+      {/* <div id="whats-hot" className="-translate-y-40 md:-translate-y-10"> */}
         <HoverBorderGradientDemo />
-      </div>
+      {/* </div> */}
       <LayoutTextFlipDemo />
     </div>
   );

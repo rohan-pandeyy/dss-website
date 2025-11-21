@@ -41,9 +41,9 @@ export default function Footer() {
               <IconMail size={20} />
               <span>datascienceclub@bennett.edu.in</span>
             </a>
-            <a href="https://www.instagram.com/datasciencesociety_bu" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 text-neutral-600 dark:text-neutral-400 hover:text-neutral-800 dark:hover:text-neutral-200 transition-colors">
+            <a href="https://www.instagram.com/dss_bu" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 text-neutral-600 dark:text-neutral-400 hover:text-neutral-800 dark:hover:text-neutral-200 transition-colors">
               <IconBrandInstagram size={20} />
-              <span>@datasciencesociety_bu</span>
+              <span>@dss_bu</span>
             </a>
             <a href="https://www.linkedin.com/company/dss-bu" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 text-neutral-600 dark:text-neutral-400 hover:text-neutral-800 dark:hover:text-neutral-200 transition-colors">
               <IconBrandLinkedin size={20} />

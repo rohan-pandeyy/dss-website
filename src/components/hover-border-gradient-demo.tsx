@@ -11,7 +11,7 @@ import {
 export default function HoverBorderGradientDemo() {
   return (
     <div className="md:translate-y-0 w-full rounded-md bg-black relative flex flex-col items-center justify-center antialiased">
-      <h1 className="mt-30 relative z-10 text-4xl md:text-7xl text-transparent [-webkit-text-stroke:0.4px_silver] text-center font-sans font-bold">Upcoming Event</h1>
+      <h1 className="mt-30 relative z-10 text-4xl md:text-7xl text-transparent [-webkit-text-stroke:0.4px_silver] text-center font-sans font-bold">Most Recently</h1>
       <h1 className="mt-10 relative z-10 text-4xl md:text-7xl bg-clip-text text-transparent text-center font-sans font-bold">
         {/* Mobile view */}
         <div className="flex flex-col items-center md:hidden">
@@ -108,7 +108,7 @@ export default function HoverBorderGradientDemo() {
             <span className="relative z-10 text-2xl md:text-4xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 text-center font-sans font-bold">
               20th November 2025,
               <br />
-              time revealing soon
+              3:30 PM; PLH-101
               <br />
               <br />
             </span>
