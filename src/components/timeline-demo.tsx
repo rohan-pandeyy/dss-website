@@ -24,6 +24,18 @@ export default function TimelineDemo() {
       ],
     },
     {
+      title: "ICEDSP Day 2 (Mar'25)",
+      description:
+        "The second day combined expert insights with vibrant student engagement, featuring keynotes on GenAI, Data Engineering, and HCI by leaders from AWS, AtriCure, and NSUT. The event included student workshops and project showcases, concluding with a valedictory ceremony that celebrated the collective achievements of the data science community.",
+      images: [
+        "/Events/ICEDSP/Day2/1.jpeg",
+        "/Events/ICEDSP/Day2/2.jpeg",
+        "/Events/ICEDSP/Day2/3.jpeg",
+        "/Events/ICEDSP/Day2/4.jpeg",
+        "/Events/ICEDSP/Day2/5.jpeg",
+      ],
+    },
+    {
       title: "Data Quest (Feb'25)",
       description:
         "Inspired by the high-stakes excitement of Squid Game, this event challenged participants to tackle a series of data-driven tasks, each round testing their analytical skills, creativity, and teamwork, aiming to promote data literacy, problem-solving, and collaborative thinking in an engaging and dynamic environment.",
