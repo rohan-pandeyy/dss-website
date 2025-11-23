@@ -48,7 +48,7 @@ export default function TimelineDemo() {
       ],
     },
     {
-      title: "Data Quest (Feb'25)",
+      title: "Data Quest (Jan'25)",
       description:
         "Inspired by the high-stakes excitement of Squid Game, this event challenged participants to tackle a series of data-driven tasks, each round testing their analytical skills, creativity, and teamwork, aiming to promote data literacy, problem-solving, and collaborative thinking in an engaging and dynamic environment.",
       images: [
@@ -60,7 +60,7 @@ export default function TimelineDemo() {
       ],
     },
     {
-      title: "Bennett's Got Data (Jan'25)",
+      title: "Bennett's Got Data (Nov'24)",
       description:
         "A talent showcase event, inspired by the popular format of competitive talent shows. Inviting data science enthusiasts from all levels to present their unique projects, insights, or skills in a competitive setting.",
       images: [
