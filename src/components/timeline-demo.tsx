@@ -12,6 +12,18 @@ export default function TimelineDemo() {
   const allEvents: EventData[] = [
     // Add newer events here
     {
+      title: "DSS x Google Crowdsource (Nov'25)",
+      description:
+        "The Data Science Society BU hosted the university's first speaker session in collaboration with Crowdsource by Google India. Mr. Harshit Goyal, Operations Manager at Google's AI & Data Operations, shared insights on community-driven AI contributions, Responsible AI, and Adversarial Prompting, highlighting the impact of diverse datasets and the future of human-AI collaboration.",
+      images: [
+        "/Events/GoogleCrowdsource_NoCodeAITrainingWorkshop/1.jpeg",
+        "/Events/GoogleCrowdsource_NoCodeAITrainingWorkshop/2.jpeg",
+        "/Events/GoogleCrowdsource_NoCodeAITrainingWorkshop/3.jpeg",
+        "/Events/GoogleCrowdsource_NoCodeAITrainingWorkshop/4.jpeg",
+        "/Events/GoogleCrowdsource_NoCodeAITrainingWorkshop/5.jpeg",
+      ],
+    },
+    {
       title: "International Conference on Emerging Data Science Paradigm (Mar'25)",
       description:
         "Hosted the International Conference on Emerging Data Science Paradigm, uniting global experts to explore the future of AI. The event featured keynotes on Human-Centered Computing and Deep Learning, plus a panel on Generative AI, highlighting the university's dedication to advancing data science and innovation.",
