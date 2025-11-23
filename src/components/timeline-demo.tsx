@@ -12,6 +12,18 @@ export default function TimelineDemo() {
   const allEvents: EventData[] = [
     // Add newer events here
     {
+      title: "International Conference on Emerging Data Science Paradigm (Mar'25)",
+      description:
+        "Hosted the International Conference on Emerging Data Science Paradigm, uniting global experts to explore the future of AI. The event featured keynotes on Human-Centered Computing and Deep Learning, plus a panel on Generative AI, highlighting the university's dedication to advancing data science and innovation.",
+      images: [
+        "/Events/ICEDSP/Day1/1.jpeg",
+        "/Events/ICEDSP/Day1/2.jpeg",
+        "/Events/ICEDSP/Day1/3.jpeg",
+        "/Events/ICEDSP/Day1/4.jpeg",
+        "/Events/ICEDSP/Day1/5.jpeg",
+      ],
+    },
+    {
       title: "Data Quest (Feb'25)",
       description:
         "Inspired by the high-stakes excitement of Squid Game, this event challenged participants to tackle a series of data-driven tasks, each round testing their analytical skills, creativity, and teamwork, aiming to promote data literacy, problem-solving, and collaborative thinking in an engaging and dynamic environment.",
