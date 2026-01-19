@@ -1,15 +1,15 @@
-import HoverBorderGradientDemo from "@/components/hover-border-gradient-demo";
-import GlobeDemo from "@/components/globe-demo";
-import LayoutTextFlipDemo from "@/components/layout-text-flip-demo";
+import HoverBorderGradientDemo from '@/components/hover-border-gradient-demo';
+import GlobeDemo from '@/components/globe-demo';
+import LayoutTextFlipDemo from '@/components/layout-text-flip-demo';
 
 export default function Home() {
-  return (
-    <div>
-      <GlobeDemo />
-      {/* <div id="whats-hot" className="-translate-y-40 md:-translate-y-10"> */}
-        <HoverBorderGradientDemo />
-      {/* </div> */}
-      <LayoutTextFlipDemo />
-    </div>
-  );
+    return (
+        <div>
+            <GlobeDemo />
+            <div id='whats-hot' className='-translate-y-40 md:-translate-y-10'>
+                <HoverBorderGradientDemo />
+            </div>
+            <LayoutTextFlipDemo />
+        </div>
+    );
 }
