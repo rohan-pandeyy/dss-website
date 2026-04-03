@@ -119,11 +119,11 @@ export default function HoverBorderGradientDemo() {
                         <br />
                         <br />
                         <span className='relative z-10 text-2xl md:text-4xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 text-center font-sans font-bold'>
-                            26th January 2026,
+                            17th April 2026,
                             <br />
-                            3:00 PM
+                            7:00 PM
                             <br />
-                            Online
+                            PLA-018
                             <br />
                             <br />
                         </span>
